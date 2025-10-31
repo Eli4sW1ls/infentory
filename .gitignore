@@ -1,0 +1,11 @@
+kcl_pp/*/.txt
+kcl_pp/*.log
+kcl_pp/*.toml
+kcl_pp/*.trr
+kcl_pp/load*
+kcl_pp/init_paths/*txt
+kcl_pp/init_paths/load*
+kcl_pp/worker*
+kcl_pp/__pycache__/
+*.pyc
+kcl_pp/infretis_dat*.txt

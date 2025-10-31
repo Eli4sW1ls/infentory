@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug modify_paths.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/kcl_pp/init_paths/modify_paths.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/kcl_pp/init_paths",
+            "args": [
+                "load",
+                "./infretis.toml",
+                "65",
+                "65",
+                "65",
+                "65"
+            ],
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        },
+    ]
+}

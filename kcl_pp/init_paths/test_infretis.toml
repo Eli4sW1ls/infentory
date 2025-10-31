@@ -1,0 +1,38 @@
+
+[runner]
+workers = 1
+
+[simulation]
+mode = "pp"
+interfaces = [4.0000, 5.5556, 7.1111, 8.6667, 10.2222]
+steps = 5  # Just run a few steps for testing
+seed = 42
+load_dir = "load_pp"
+shooting_moves = ["sh", "sh", "sh", "sh"]
+
+[simulation.tis_set]
+maxlength = 2000000
+allowmaxlength = false
+zero_momentum = true
+n_jumps = 3
+
+[engine]
+class = "gromacs"
+engine = "gmx"
+timestep = 0.002
+gmx_format = "g96"
+input_path = "gromacs_input"
+gmx = "gmx"
+subcycles = 10
+temperature = 303.15
+
+[orderparameter]
+class = "PositionX"
+module = "orderp.py"
+config = "gromacs_input/conf.gro"
+
+[output]
+data_dir = "./test_output"
+screen = 1
+pattern = 0
+delete_old = false
